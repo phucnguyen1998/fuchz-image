@@ -9,7 +9,7 @@ function* handleImagesLoad() {
     try {
         const page = yield select(getPage);
         const images = yield call(fetchImages, page);
-        yield put(setImages(images))
+        yield put(setImages(images));
     } catch (error) {
         //dispath action error
         yield put(setError(error.toString()))
